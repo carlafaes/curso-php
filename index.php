@@ -1,5 +1,6 @@
 <?php
   include("file.php"); //importacion del archivo file
+  include("ambitos.php");
  
   print 'inicio de curso,prueba de mensaje simple <br>';//prueba
 
