@@ -3,5 +3,7 @@
 
   //variables
   $nombre_persona ="car";
-  
+  $edad= 25;
+  print $nombre_persona;
+  print $edad;
 ?>
