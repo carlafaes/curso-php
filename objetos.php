@@ -22,4 +22,30 @@ $audi -> acelerar();//llamada del metodo para que ejecute la funcion acelerar
 
 $audi->establecer_color("rojo","Audi");
 echo "tiene " . $audi->ruedas . "cantidad de ruedas <br>";
+
+//-----------------HERENCIA--------------------------------------//
+
+class Camion extends Automovil{
+    function Camion(){
+        $this->ruedas=8;
+        $this->color="Gris";
+    }
+    function establecer_color($color_camion, $nombre_camion)
+    {
+     $this->color= $color_camion;
+     
+     echo "El color de " . $nombre_camion . "es" . $this->color . "<br>";
+    }
+    function acelerar2()
+    {
+        parent::acelerar();
+        echo "camion acelerando";
+    }
+}
+
+$volkswagen= new Camion();
+$volkswagen->acelerar2();
+$volkswagen->establecer_color($this->color, "volkswagen");
+
+
 ?>
