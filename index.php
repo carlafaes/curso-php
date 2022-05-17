@@ -1,5 +1,7 @@
 <?php
-  print 'inicio de curso,prueba de mensaje simple';//prueba
+  include("file.php"); //importacion del archivo file
+ 
+  print 'inicio de curso,prueba de mensaje simple <br>';//prueba
 
   //variables
   $nombre_persona ="car";
@@ -17,4 +19,7 @@
 
   //con echo podemos tambien imprimir una seguidilla de variables,esto print no lo acepta
   echo $nombre_persona, $edad;
+
+ 
+  datos();
 ?>
