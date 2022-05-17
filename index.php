@@ -3,7 +3,10 @@
 
   //variables
   $nombre_persona ="car";
-  $edad= 25;
-  print $nombre_persona;
-  print $edad;
+  $edad= 25 ;
+  
+  // ambos print logran el mismo resultado
+  print "El nombre de usuario es " . $nombre_persona;
+  print "El nombre de usuario es $nombre_persona";
+  
 ?>
