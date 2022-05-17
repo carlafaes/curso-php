@@ -14,4 +14,7 @@
   
   //echo tambien nos permite imprimir
   echo "El nombre de usuario es " . $nombre_persona . " su edad es " . $edad;
+
+  //con echo podemos tambien imprimir una seguidilla de variables,esto print no lo acepta
+  echo $nombre_persona, $edad;
 ?>
