@@ -11,15 +11,15 @@ class Automovil{
     function acelerar(){
         echo "Estoy acelerando";
     }
-    function establecer_color($color_auto){
+    function establecer_color($color_auto, $nombre_auto){
         $this->color=$color_auto;
-        echo "el color de este automovil es:" . $this->color;
+        echo "el color de " . $nombre_auto . " es:" . $this->color;
     }
 }
 $audi= new Automovil(); //estado inicial del objeto o instancias, se da mediante la llamada del constructor
 
 $audi -> acelerar();//llamada del metodo para que ejecute la funcion acelerar
 
-$audi->establecer_color("rojo");
+$audi->establecer_color("rojo","Audi");
 echo "tiene " . $audi->ruedas . "cantidad de ruedas <br>";
 ?>
