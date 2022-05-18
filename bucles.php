@@ -30,4 +30,25 @@ while($k <= $exp){
 
 echo "el valor de $base elevado a el exponente $exp es: " . $resultado;
 
+for ($h=0; $h < $exp ; $h++) { 
+    # code...
+    $resultado *= $base;
+}
+echo "el valor de $base elevado a el exponente $exp es: " . $resultado;
+
+$filas = 10;
+
+for ($i=1; $i <= $filas; $i++) { 
+    for ($ñ=0; $ñ <= $i ; $ñ++) { 
+        # code...
+        echo $ñ++;
+    }
+}
+
+$nombre  = ["Ati","Nina", "Olaff"];
+
+foreach($nombre as $index => $item){
+    echo "$index: $item <br>";
+}
+
 ?>
