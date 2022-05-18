@@ -1,6 +1,7 @@
 <?php
 class Compra_vehiculo{
     private $precio_base;
+    static $descuento=4500;
 
     function Compra_vehiculo($gama){
         if($gama == "urbano"){
@@ -34,11 +35,18 @@ class Compra_vehiculo{
         }
     }//fin tapiceria_cuero
     function precio_final(){
-        return $this -> precio_base;
+        $valor_final= $this ->precio_base - self::$descuento; //self:: se utiliza para acceder a la variable estatica
+
+        return $valor_final;
     }//fin precio final
 }//fin clase
 
 $compra_cliente= new Compra_vehiculo("compacto");
 $compra_cliente->climatizador();
-echo "el precio final es: " . $compra_cliente->precio_final();
+echo "el precio final es: " . $compra_cliente->precio_final() . "<br>";
+
+$compra_segundo_cliente= new Compra_vehiculo("urbano");
+$compra_segundo_cliente ->tapiceria_cuero("beige");
+$compra_segundo_cliente ->navegador_gps();
+echo "El precio final segundo cliente: " . $compra_segundo_cliente->precio_final();
 ?>
