@@ -7,6 +7,7 @@ class Automovil{
     //function get_ruedas(){
         //return $this->ruedas;
     //}
+    //protected $ruedas; encapsularia la variable, pero es accesible desde la propia clase y desde sus clases heredadas.
     var $color;
     var $ruedas;
 
