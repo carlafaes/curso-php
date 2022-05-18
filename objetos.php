@@ -1,9 +1,14 @@
 <?php
 
 class Automovil{
-    var $ruedas;
     //private $ruedas; encapsularia la variable y solo seria accesible desde la propia clase y no desde otro lugar
+    //la varibale privada puede ser accedida desde fuera de la clase con el metodo GET
+    //POR EJEMPLO
+    //function get_ruedas(){
+        //return $this->ruedas;
+    //}
     var $color;
+    var $ruedas;
 
     function Automovil(){ //metodo constructor
         $this -> ruedas= 4;
