@@ -1,7 +1,7 @@
 <?php
 class Compra_vehiculo{
     private $precio_base;
-    static $descuento=4500;
+    private static $descuento=0;
 
     function Compra_vehiculo($gama){
         if($gama == "urbano"){
@@ -34,6 +34,17 @@ class Compra_vehiculo{
             $this -> precio_base += 5000;
         }
     }//fin tapiceria_cuero
+
+    static function descuento_(){
+        if(date("m-d-y") > "15-05-2022" && date("m-d-y") < "15-07-2022" ){
+            self::$descuento=4500;
+        }
+        else{
+            self::$descuento=100;
+        }
+    }
+
+    
     function precio_final(){
         $valor_final= $this ->precio_base - self::$descuento; //self:: se utiliza para acceder a la variable estatica
 
@@ -41,6 +52,7 @@ class Compra_vehiculo{
     }//fin precio final
 }//fin clase
 
+Compra_vehiculo::descuento_(); //aplica el descuento
 $compra_cliente= new Compra_vehiculo("compacto");
 $compra_cliente->climatizador();
 echo "el precio final es: " . $compra_cliente->precio_final() . "<br>";
@@ -49,4 +61,6 @@ $compra_segundo_cliente= new Compra_vehiculo("urbano");
 $compra_segundo_cliente ->tapiceria_cuero("beige");
 $compra_segundo_cliente ->navegador_gps();
 echo "El precio final segundo cliente: " . $compra_segundo_cliente->precio_final();
+
+
 ?>
