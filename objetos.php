@@ -2,6 +2,7 @@
 
 class Automovil{
     var $ruedas;
+    //private $ruedas; encapsularia la variable y solo seria accesible desde la propia clase y no desde otro lugar
     var $color;
 
     function Automovil(){ //metodo constructor
