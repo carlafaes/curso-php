@@ -50,5 +50,29 @@ $nombre  = ["Ati","Nina", "Olaff"];
 foreach($nombre as $index => $item){
     echo "$index: $item <br>";
 }
+//------------------------------
+
+function valoracion($name, $rating = 5){
+    echo "El nombre $name tiene un rating de $rating";
+}
+
+valoracion("Car");
+valoracion("Mike", 4);
+
+//------------------------------------------
+
+function concatenar(...$words){
+    $resultado_="";
+
+    foreach($words as $word){
+        $resultado_= $resultado_ . $word . " ";// es igual a  $resultado_.= $word . " ";
+    }
+    echo $resultado_;
+}
+
+concatenar("word1","wod2","word3"); //retorna un array
+
+
+
 
 ?>
