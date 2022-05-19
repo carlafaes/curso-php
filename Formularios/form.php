@@ -8,7 +8,7 @@
 </head>
 <body>
     
-<form action="process.php" method="POST">
+<form action="./process.php" method="POST">
     <label for="name">
         Name:
         <input id="name" name="name" type="text">

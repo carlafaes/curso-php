@@ -16,7 +16,8 @@
   // include("bucles.php");
   // echo "<br>";
   // include("func.php");
-  include("./Formularios/form.php")
+  include("./Formularios/form.php");
+  include("./Formularios/process.php");
 
   // $compra_cliente= new Compra_vehiculo("compacto");
   // echo "el precio final es: " . $compra_cliente->precio_final;
